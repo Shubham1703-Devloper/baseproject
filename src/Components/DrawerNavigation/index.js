@@ -11,11 +11,10 @@ import {
 } from "react-native";
 
 import { createDrawerNavigator } from "@react-navigation/drawer";
-import CustomSidebar from "../../Components/CustomSlider";
+import CustomSidebar from "../CustomSlider";
 import side_menu_home from '../../lib/images'
 import styles from './styles'
 import DashBoard from "../../Screens/DashboardTab/Dashboard";
-
 
 
 

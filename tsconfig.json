@@ -1,4 +1,4 @@
-
 {
+  "include": ["custom.d.ts"],
   "extends": "@tsconfig/react-native/tsconfig.json"
 }

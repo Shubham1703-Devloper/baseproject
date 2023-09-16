@@ -2,7 +2,7 @@ import {PropTypes} from 'prop-types';
 import React, {PureComponent, useState} from 'react';
 import {Image} from 'react-native';
 import {View, Text, Dimensions, TouchableHighlight} from 'react-native';
-import {Button} from 'react-native';
+// import {Button} from 'react-native';
 import Toptabnavigator from '../../Toptabnavigator';
 import Swipeable from 'react-native-gesture-handler/Swipeable';
 import OTPInputView from '@twotalltotems/react-native-otp-input';
@@ -10,6 +10,7 @@ import styles from './styles';
 import {Rating, AirbnbRating} from 'react-native-ratings';
 import Tooltip from 'react-native-walkthrough-tooltip';
 import CustomButton from '../../../Components/Button';
+import Button from '../../../Components/Button';
 
 
 const screenWidth = Dimensions.get('screen').width;
@@ -19,8 +20,9 @@ const DashBoard = props => {
   const [toolTipVisible, settoolTipVisible] = useState(false);
   return (
     <View style={{flex: 1}}>
-      <Button onPress={() => props.navigation.openDrawer()} title="Press" />
+      <Button  greyButton onPress={() => props.navigation.openDrawer()} title="Press" />
       <Button
+       greyButton
         onPress={() => props.navigation.navigate('SwipeGesture')}
         title="SwipeGesture"
       />
@@ -39,8 +41,6 @@ const DashBoard = props => {
         />
       </View>
 
-
-     
 
       <View style={{marginHorizontal: 40,alignSelf:'center'}}>
         <Tooltip
@@ -66,6 +66,8 @@ const DashBoard = props => {
           onClose={() => settoolTipVisible(false)}>
           <CustomButton
           greyButton
+          title='Open Tooltip'
+          titleStyle={styles.textStyle}
             onPress={() => settoolTipVisible(true)}>
             Press me
           </CustomButton>
